@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dimmer Device</title>
+</head>
+
+<body>
+
+    <div class="container" id="con">
+        <div class="container-left" id="c-left">
+
+            <div class="box" id="box">
+                <div class="inner-box" id="innerbox">
+                    <div class="button-box">
+                        <button id="on-button"></button>
+                        
+                        <button id="off-button"></button>
+                    </div>
+                    <input type="range" value="0" orient="vertical" min="0" max="255" class="slider" id="slider">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-right" id="c-right">
+            <div class="box2" id="box2">
+                <h3 id="currentStateText">Current State : <span id="on_off_span">OFF</span></h3>
+                <label>Dimmer Value :</label>
+                <input type="number" id="dimmerValue" min="0" max="255" value="0">
+            </div>
+        </div>
+
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
