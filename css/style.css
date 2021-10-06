@@ -9,11 +9,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -21,17 +21,18 @@ body {
 .container {
   border: 1px solid black;
   border-radius: 5%;
-  height: 600px;
+  height: 558px;
   width: 900px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 /* Two parts of the container(container-left,container-right) */
@@ -42,11 +43,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .container-right {
@@ -56,15 +57,15 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 /* This is the grey box which holds the button */
@@ -75,13 +76,20 @@ body {
   border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+}
+
+#box_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /* The box where the color changes from white to orange/orange to white */
@@ -93,7 +101,7 @@ body {
   height: 320px;
   position: relative;
   -webkit-box-shadow: -2px -2px grey, 1px 1px grey;
-          box-shadow: -2px -2px grey, 1px 1px grey;
+  box-shadow: -2px -2px grey, 1px 1px grey;
 }
 
 /* Box which holds two buttons ON/OFF */
@@ -107,17 +115,17 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 9px 0px 9px 20px;
   -webkit-box-shadow: -1px -1px black, 0.5px 0.5px black;
-          box-shadow: -1px -1px black, 0.5px 0.5px black;
+  box-shadow: -1px -1px black, 0.5px 0.5px black;
 }
 
 /* Common code for two buttons  */
@@ -129,15 +137,15 @@ button {
 }
 
 /* ON-button(Above Button) */
-#on-button {
+.btn-box-1 #on-button1, .btn-box-2 #on-button2, .btn-box-3 #on-button3, .btn-box-4 #on-button4 {
   border: none;
-  background-color: white;
+  background-color: #ffffff;
   -webkit-box-shadow: -10px -20px 20px grey;
-          box-shadow: -10px -20px 20px grey;
+  box-shadow: -10px -20px 20px grey;
 }
 
 /* OFF-button(Below Button) */
-#off-button {
+.btn-box-1 #off-button1, .btn-box-2 #off-button2, .btn-box-3 #off-button3, .btn-box-4 #off-button4 {
   border: none;
   border-top: 1px solid #fdfdfd;
   background-color: #fafafa;
@@ -146,7 +154,7 @@ button {
 /* Slider code starts here */
 .slider {
   -webkit-transform: translate(-50%, -50%) rotate(-90deg);
-          transform: translate(-50%, -50%) rotate(-90deg);
+  transform: translate(-50%, -50%) rotate(-90deg);
   -webkit-appearance: none;
   width: 300px;
   height: 20px;
@@ -177,20 +185,32 @@ button {
 }
 
 .slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #0077ff;
-  border-radius: 50%;
+  width: 30px;
+  height: 20px;
+  background: grey;
+  border-radius: 50px;
   cursor: pointer;
 }
 
 /* Slider code Ends here */
 /* Common  code for the text */
-h3, label {
+h3 {
   font-size: 1.5rem;
-  margin: 20px;
   font-weight: 400;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  height: 100%;
+  font-weight: 400;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#box2 {
+  text-align: center;
 }
 
 /* This is the dimmer value input area which gives output  */
@@ -200,21 +220,173 @@ h3, label {
   text-align: center;
 }
 
-@media screen and (max-width: 900px) {
+#select-input {
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  margin-left: 50px;
+}
+
+#input-port {
+  margin-bottom: 15px;
+}
+
+#box-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#input-port input {
+  height: 18px;
+  width: 22px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
   .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     border: none;
   }
-  .container-left, .container-right {
+  .container-left {
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .container-right {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    width: 100%;
+    margin: 20px;
+  }
+  h3 {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 1000;
   }
   .box {
-    height: 390px;
+    height: 370px;
+    position: absolute;
+    top: 23%;
+    left: 22%;
+  }
+  .dimmer {
+    position: absolute;
+    bottom: 10%;
+    left: 30%;
+  }
+  #select-input {
+    margin-left: 50px;
+  }
+  #port-box {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .box {
+    left: 15%;
+  }
+  .dimmer {
+    left: 25%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .box {
+    left: 12%;
+  }
+  .dimmer {
+    left: 24%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .box {
+    left: 10%;
+  }
+  .dimmer {
+    left: 21%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .box {
+    left: 8%;
+  }
+  .dimmer {
+    left: 18%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .box {
+    left: 4%;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .box {
+    left: 2%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .box {
+    left: 0%;
+  }
+}
+
+@media screen and (max-height: 620px) {
+  .dimmer {
+    bottom: 4%;
+  }
+}
+
+@media screen and (max-height: 568px) {
+  h3 {
+    margin: 10px 0px 20px 0px;
+  }
+  #input-port {
+    margin-bottom: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */

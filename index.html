@@ -10,33 +10,72 @@
 </head>
 
 <body>
-
     <div class="container" id="con">
         <div class="container-left" id="c-left">
-
-            <div class="box" id="box">
-                <div class="inner-box" id="innerbox">
-                    <div class="button-box">
-                        <button id="on-button"></button>
-                        
-                        <button id="off-button"></button>
+            <div class="box port1-box" id="box_1">
+                <div class="inner-box" id="innerbox1">
+                    <div class="button-box btn-box-1">
+                        <button id="on-button1"></button>
+                        <button id="off-button1"></button>
                     </div>
-                    <input type="range" value="0" orient="vertical" min="0" max="255" class="slider" id="slider">
+                    <input type="range" value="0" orient="vertical" min="0" max="255" class="slider" id="slider1">
+                </div>
+            </div>
+            <div class="box port2-box" id="box_2">
+                <div class="inner-box" id="innerbox2">
+                    <div class="button-box btn-box-2">
+                        <button id="on-button2"></button>
+                        <button id="off-button2"></button>
+                    </div>
+                    <input type="range" value="0" orient="vertical" min="0" max="255" class="slider" id="slider2">
+                </div>
+            </div>
+            <div class="box port3-box" id="box_3">
+                <div class="inner-box" id="innerbox3">
+                    <div class="button-box btn-box-3">
+                        <button id="on-button3"></button>
+                        <button id="off-button3"></button>
+                    </div>
+                    <input type="range" value="0" orient="vertical" min="0" max="255" class="slider" id="slider3">
+                </div>
+            </div>
+            <div class="box port4-box" id="box_4">
+                <div class="inner-box" id="innerbox4">
+                    <div class="button-box btn-box-4">
+                        <button id="on-button4"></button>
+                        <button id="off-button4"></button>
+                    </div>
+                    <input type="range" value="0" orient="vertical" min="0" max="255" class="slider" id="slider4">
+                </div>
+            </div>
+
+        </div>
+        <div class="container-right" id="c-right">
+            <div class="box2" id="box2">
+                <div id="box-inner">
+
+                    <h3 id="currentStateText">Current State : <span id="on_off_span"> OFF</span></h3>
+                    <div onclick="getradioval()" id="input-port">
+                        <label for="input-port">Port :</label>
+                        <input type="radio" name="input-radios" value="port1" id="port1" checked>
+                        <label for="inputing-port">1</label>
+                        <input type="radio" name="input-radios" value="port2" id="port2">
+                        <label for="inputing-port">2</label>
+                        <input type="radio" name="input-radios" value="port3" id="port3">
+                        <label for="inputing-port">3</label>
+                        <input type="radio" name="input-radios" value="port4" id="port4">
+                        <label for="inputing-port">4</label>
+                    </div>
+                </div>
+                <div class="dimmer">
+                    <label>Dimmer Value :</label>
+                    <input type="number" id="dimmerValue" min="0" max="255" value="0">
                 </div>
             </div>
         </div>
-
-
-        <div class="container-right" id="c-right">
-            <div class="box2" id="box2">
-                <h3 id="currentStateText">Current State : <span id="on_off_span">OFF</span></h3>
-                <label>Dimmer Value :</label>
-                <input type="number" id="dimmerValue" min="0" max="255" value="0">
-            </div>
-        </div>
-
     </div>
-    <script src="js/index.js"></script>
+    <!-- javascript files  -->
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>

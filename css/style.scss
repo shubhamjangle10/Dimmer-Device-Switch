@@ -1,114 +1,159 @@
-*{
+* {
     margin: 0;
     padding: 0;
-}
-
-body{
+  }
+  
+  body {
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     overflow: hidden;
-}
-
-
-/* This is the container inside body with only black border */
-.container{ 
+  }
+  
+  /* This is the container inside body with only black border */
+  .container {
     border: 1px solid black;
     border-radius: 5%;
-    height: 600px;
+    height: 558px;
     width: 900px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/* Two parts of the container(container-left,container-right) */
-.container-left{
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+  }
+  
+  /* Two parts of the container(container-left,container-right) */
+  .container-left {
     height: 100%;
     width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.container-right{
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .container-right {
     height: 100%;
     width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-
-/* This is the grey box which holds the button */
-.box{
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  
+  /* This is the grey box which holds the button */
+  .box {
     height: 500px;
     width: 320px;
-    background-color: rgb(245, 245, 245);
+    background-color: whitesmoke;
     border-radius: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+  }
+  
+  #box_1 {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-
-/* The box where the color changes from white to orange/orange to white */
-.inner-box{
+  }
+  /* The box where the color changes from white to orange/orange to white */
+  .inner-box {
     background-color: white;
     border: 1px solid black;
     border-radius: 10px;
     width: 180px;
     height: 320px;
     position: relative;
-    box-shadow: -2px -2px grey, 1px 1px grey;
-}
-
-
-/* Box which holds two buttons ON/OFF */
-.button-box{
+    -webkit-box-shadow: -2px -2px grey, 1px 1px grey;
+            box-shadow: -2px -2px grey, 1px 1px grey;
+  }
+  
+  /* Box which holds two buttons ON/OFF */
+  .button-box {
     height: 300px;
     width: 130px;
     border: 1px solid black;
     background-color: grey;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 9px 0px 9px 20px;
-    box-shadow: -1px -1px rgb(0, 0, 0), 0.5px 0.5px rgb(0, 0, 0);
-}
-
-/* Common code for two buttons  */
-button{
+    -webkit-box-shadow: -1px -1px black, 0.5px 0.5px black;
+            box-shadow: -1px -1px black, 0.5px 0.5px black;
+  }
+  
+  /* Common code for two buttons  */
+  button {
     height: 100%;
     width: 100%;
     border: none;
     outline: none;
-}
-
-/* ON-button(Above Button) */
-#on-button{
+  }
+  
+  /* ON-button(Above Button) */
+  .btn-box-1 #on-button1,  .btn-box-2 #on-button2,  .btn-box-3 #on-button3,  .btn-box-4 #on-button4 {
     border: none;
-    background-color: rgb(255, 255, 255);
-    box-shadow: -10px -20px 20px grey;
-}
-
-/* OFF-button(Below Button) */
-#off-button{
+    background-color: #ffffff;
+    -webkit-box-shadow: -10px -20px 20px grey;
+            box-shadow: -10px -20px 20px grey;
+  }
+  
+  /* OFF-button(Below Button) */
+  .btn-box-1 #off-button1, .btn-box-2 #off-button2, .btn-box-3 #off-button3, .btn-box-4 #off-button4{
     border: none;
-    border-top: 1px solid rgb(253,253,253);
-    background-color: rgb(250, 250, 250);
-}
-
-
-/* Slider code starts here */
-.slider {
-    transform: translate(-50%,-50%) rotate(-90deg);
+    border-top: 1px solid #fdfdfd;
+    background-color: #fafafa;
+  }
+  
+  
+  
+  /* Slider code starts here */
+  .slider {
+    -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+            transform: translate(-50%, -50%) rotate(-90deg);
     -webkit-appearance: none;
     width: 300px;
     height: 20px;
@@ -120,14 +165,15 @@ button{
     outline: none;
     opacity: 1;
     -webkit-transition: .2s;
+    -webkit-transition: opacity .2s;
     transition: opacity .2s;
-}
-
-.slider:hover {
+  }
+  
+  .slider:hover {
     opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
+  }
+  
+  .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 30px;
@@ -135,49 +181,207 @@ button{
     background: grey;
     border-radius: 50px;
     cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: #0077ff ;
-    border-radius: 50%;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 30px;
+    height: 20px;
+    background: grey;
+    border-radius: 50px;
     cursor: pointer;
-}
-/* Slider code Ends here */
-
-
-
-/* Common  code for the text */
-h3,label{
+  }
+  
+  /* Slider code Ends here */
+  /* Common  code for the text */
+  h3 {
     font-size: 1.5rem;
-    margin: 20px;
     font-weight: 400;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-
-/* This is the dimmer value input area which gives output  */
-#dimmerValue{
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    height: 100%;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  #box2 {
+    text-align: center;
+  }
+  
+  /* This is the dimmer value input area which gives output  */
+  #dimmerValue {
     width: 60px;
     height: 30px;
     text-align: center;
-}
-
-
-
-
-@media  screen and (max-width:900px) {
-    .container{
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        border: none;
+  }
+  
+  #select-input {
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    margin-left: 50px;
+  }
+  
+  #input-port {
+    margin-bottom: 15px;
+  }
+  
+  #box-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  #input-port input {
+    height: 18px;
+    width: 22px;
+    margin-left: 10px;
+  }
+  
+  @media screen and (max-width: 650px) {
+    body {
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
     }
-    .container-left,.container-right{
-        width: 100%;
+    .container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 100%;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      border: none;
     }
-    .box{
-        height: 390px;
+    .container-left {
+      width: 100%;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
     }
-}
+    .container-right {
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      width: 100%;
+      margin: 20px;
+    }
+    h3 {
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      margin: 25px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      z-index: 1000;
+    }
+    .box {
+      height: 370px;
+      position: absolute;
+      top: 23%;
+      left: 22%;
+    }
+    .dimmer {
+      position: absolute;
+      bottom: 10%;
+      left: 30%;
+    }
+    #select-input {
+      margin-left: 50px;
+    }
+    #port-box {
+      width: 150px;
+    }
+  }
+  
+  @media screen and (max-width: 500px){
+    .box {
+      left: 15%;
+    }
+    .dimmer{
+      left: 25%;
+    }
+
+  }
+  @media screen and (max-width: 420px){
+    .box {
+      left: 12%;
+    }
+    .dimmer{
+      left: 24%;
+    }
+
+  }
+  @media screen and (max-width: 400px){
+    .box {
+      left: 10%;
+    }
+    .dimmer{
+      left: 21%;
+    }
+  }
+  @media screen and (max-width: 380px){
+    .box {
+      left: 8%;
+    }
+    .dimmer{
+      left: 18%;
+    }
+  }
+  @media screen and (max-width: 360px){
+    .box {
+      left: 4%;
+    }
+  }
+  @media screen and (max-width: 340px){
+    .box {
+      left: 2%;
+    }
+  }
+  @media screen and (max-width: 320px){
+    .box {
+      left: 0%;
+    }
+  }
+
+  @media screen and (max-height: 620px){
+    .dimmer{
+      bottom: 4%;
+    }
+  }
+
+  @media screen and (max-height: 568px) {
+    h3 {
+      margin: 10px 0px 20px 0px;
+    }
+    #input-port {
+      margin-bottom: 10px;
+    }
+  }
+  /*# sourceMappingURL=style.css.map */
